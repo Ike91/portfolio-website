@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap");
+
+:root {
+  /* Colors: */
+  --bg: #16181d;
+  --accent: #5686f5;
+  --accent-10: #5686f510;
+  --emphasis: #e8e8fd;
+  --text: #98a0b3;
+  /* Typography */
+  --h1: 2.25rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --paragraph: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
+  --info-text: 1rem;
+  --text-width-wide: 70ch;
+  --text-width-medium: 60ch;
+  --fw-bold: 700;
+  --fw-regular: 500;
+  --fw-light: 300;
+  /* Spacing */
+  --spacing-xxs: 0.5em;
+  --spacing-xs: 1em;
+  --spacing-s: 1.5em;
+  --spacing-m: 3em;
+  --spacing-l: 6em;
+  --spacing-xl: 8em;
+  /* Misc */
+  --radius-xs: 0.25em;
+  --radius-s: 0.5em;
+  --center-it: auto;
+}
+
+/*****************************************************
+Common styles
+ *****************************************************/
+
+p {
+  color: var(--text);
+  font-size: 21px;
+  font-family: "source-serif-pro";
+  line-height: 1.9rem;
+}
+h3 {
+  font-size: var(--h3);
+  color: var(--emphasis);
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px !important;
+  color: #ffd700;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: yellowgreen !important;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-size: 18px;
+  font-family: "source-serif-pro";
+  line-height: 1.9rem;
+}
+
+.customBtn {
+  background-color: #24242e !important;
+  border: 1px solid #5686f510 !important;
+  color: rgb(243, 243, 74) !important;
+}
+.customBtn {
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.customBtn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: yellowgreen !important;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  color: #98a0b3 !important;
+  color: var(--text);
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 1.9rem;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(360deg);
+  white-space: nowrap;
+}
+li a {
+  text-decoration: none !important;
+}
+li a:hover {
+  text-decoration: none !important;
+  color: yellow !important;
+}
+.card {
+  background-color: #24242e !important;
+  border: 1px solid #302f2f;
+}
+.popupform {
+  background-color: #24242e !important;
+  border: 1px solid #302f2f;
+}
+
+.card {
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.card {
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+/*****************************************************
+Header
+ *****************************************************/
+.header {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 20px;
+}
+
+.header p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 22px;
+}
+
+/*****************************************************
+Sidebar
+ *****************************************************/
+
+.sidebar h4 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.sidebar li {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+}
+
+.certificates h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.certificates p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+}
+
+.about h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
+
+.about {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 20px;
+}
+.about p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 20px;
+}
+.leftBtn {
+  margin-right: 40px;
+  background-color: #22212b !important;
+  border: 1px solid rgb(172, 172, 65) !important;
+}
+
+.readmore-btn {
+  height: 35px !important;
+}
+
+/*****************************************************
+Education
+ *****************************************************/
+.Education {
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    font-size: 21px !important;
+    margin-left: -1px !important;
+    font-family: "source-serif-pro";
+  }
+}
+
+/*****************************************************
+ work experience 
+ *****************************************************/
+.experience {
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    margin-left: -1px !important;
+    font-size: 21px !important;
+    font-family: "source-serif-pro";
+    line-height: 1.9rem;
+  }
+}
+
+/*****************************************************
+ Home
+ *****************************************************/
+
+.button-container button {
+  width: 110px !important;
+  height: 35px !important;
+}
+.projects a {
+  text-decoration: none !important;
+}
+.projects p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+}
+
+.projects h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+}
+
+.Page ul {
+  background: transparent !important;
+}
+/*****************************************************
+ Contact
+ *****************************************************/
+.contact {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 18px;
+}
+
+.Header-text {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.random-text {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+  font-size: 24px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button {
+  width: 120px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .random-text {
+    text-align: center;
+  }
+  .Header-text {
+    text-align: center;
+    margin-top: 0 !important;
+  }
+  .student-text {
+    text-align: center;
+    margin-top: 0 !important;
+  }
+
+  .header {
+    padding: 2px !important;
+    background: transparent !important;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/******************************************
+Project
+*******************************************/
+h1,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+.row {
+  padding: 15px 0;
+}
+.seperator {
+  margin-bottom: 30px;
+  width: 35px;
+  height: 3px;
+  background: #ffd700;
+  border: none;
+}
+.title {
+  text-align: center;
+
+  .row {
+    padding: 50px 0 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .seperator {
+    margin: 0 auto 10px;
+  }
+}
+.item {
+  position: relative;
+  margin-bottom: 30px;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .item-in {
+    background: #24242e;
+    padding: 40px;
+    position: relative;
+
+    &:hover:before {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      height: 2px;
+      width: 0%;
+      background: #ffd700;
+      right: 0px;
+      -webkit-transition: width 0.4s;
+      transition: width 0.4s;
+    }
+  }
+}
+.item {
+  h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 16px;
+  }
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .item .icon {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*************************************************
+Admin
+*************************************************/
+
+.adminBtn {
+  background-color: #24242e !important;
+  border: 1px solid #302f2f;
+  color: #98a0b3 !important;
+}
+.adminBtn {
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adminBtn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.adminBtn:active {
+  border: #ffd700 !important;
+}
+.admin {
+  h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #98a0b3 !important;
+  }
+  h3 {
+    font-size: 14px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #98a0b3 !important;
+  }
+
+  p {
+    font-size: 16.5px;
+  }
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-top: 10px;
+    text-decoration: none !important;
+  }
+  a:hover {
+    color: yellowgreen !important;
+  }
+}
+
+.modal-content {
+  background-color: #22212b;
+}
+
+.addproject {
+  h4 {
+    font-size: 18px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #98a0b3 !important;
+  }
+  h3 {
+    font-size: 14px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #98a0b3 !important;
+  }
+
+  p {
+    font-size: 16.5px;
+  }
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-top: 10px;
+    text-decoration: none !important;
+  }
+  a:hover {
+    color: yellowgreen !important;
+  }
+}
+/*****************************************************
+Login
+ *****************************************************/
+.login-dark input {
+  background-color: transparent !important;
+  font-family: "Montserrat", sans-serif;
+  color: #98a0b3 !important;
+
+  border: 1px solid #302f2f;
+}
+.login-dark input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: #98a0b3 !important;
+  font-size: 12px !important;
+}
+/*****************************************************
+Retail
+ *****************************************************/
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
