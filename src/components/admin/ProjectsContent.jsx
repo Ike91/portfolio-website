@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 
@@ -12,15 +12,14 @@ export default function ProjectsContent() {
   const { getProjects } = useAuth();
 
   const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
 
   //current project
   const [currentProject, setCurrentProject] = useState(null);
 
   //editor values
-  const [editorValue, setEditorValue] = useState(
-    currentProject ? currentProject.editorContent : ""
-  );
+  // const [editorValue, setEditorValue] = useState(
+  //   currentProject ? currentProject.editorContent : ""
+  // );
 
   // Function to format the date as "Month Year" string
   const formatMonthYear = (date) => {
@@ -88,7 +87,7 @@ export default function ProjectsContent() {
       }
     }
     fetchProjects();
-  }, []);
+  });
 
   return (
     <div className="admin">

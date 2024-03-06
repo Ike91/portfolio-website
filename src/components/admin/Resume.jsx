@@ -71,7 +71,7 @@ export default function Resume() {
 
   useEffect(() => {
     fetchDoc();
-  }, []);
+  });
 
   return (
     <div>

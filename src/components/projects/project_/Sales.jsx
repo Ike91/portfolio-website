@@ -51,6 +51,7 @@ export default function Sales() {
           <a
             href="https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales"
             target="_blank"
+            rel="noreferrer"
           >
             read more about the dataset<i class="fas fa-arrow-right ml-1"></i>
           </a>

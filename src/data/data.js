@@ -20,6 +20,7 @@ const technologies = {
   visualization: [
     { name: "Power BI", rating: 5 },
     { name: "Excel", rating: 5 },
+    { name: "Python", rating: 4 },
   ],
   tools: [
     { name: "Git", rating: 6 },

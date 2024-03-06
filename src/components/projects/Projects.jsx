@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
-import { useAuth } from "../../contexts/AuthContext";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
@@ -27,56 +26,57 @@ function Projects() {
           >
             <Carousel.Item>
               <div className="row mb-4">
-                <div class="col-md-6 item">
-                  <div class="item-in text-gray-500">
+                <div className="col-md-6 item">
+                  <div className="item-in text-gray-500">
                     <div className="row">
                       <div className="col-md-12">
                         <img
                           className="rounded rounded-md"
                           h-60
                           src="../projects/sales.jpg"
-                          alt="image"
+                          alt=""
                         />
                       </div>
                     </div>
-                    <div class="flex items-center gap-x-4 text-xs">
-                      <time datetime="2020-03-16" class="text-gray-500 mt-2">
+                    <div className="flex items-center gap-x-4 text-xs">
+                      <time
+                        datetime="2020-03-16"
+                        className="text-gray-500 mt-2"
+                      >
                         27 February 2024
                       </time>
-                      <a
-                        href="#"
-                        class="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100"
-                      >
+                      <a className="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100">
                         SQL + PowerBi
                       </a>
                     </div>
 
                     <h4>Sales analysis</h4>
-                    <div class="seperator"></div>
+                    <div className="seperator"></div>
                     <p>
-                      The project aimed to extract a specific dataset, import it
-                      into SQL Workbench, establish a connection to Power BI,
-                      execute diverse queries, apply power queries for data
-                      transformation, loading, visualize the results for
-                      comprehensive analysis and insights.
+                      This project aimed to meticulously analyze sales data from
+                      three branches across highly populated cities, spanning
+                      three months, to derive actionable insights. These
+                      insights would enhance business performance and
+                      competitiveness in a dynamic market landscape.
                     </p>
 
                     <div class="flex items-center mt-4">
-                      <a href="#" class="text-blue-500 hover:underline">
+                      <a className="text-blue-500 hover:underline">
                         <i class="fas fa-heart mr-1"></i>
                         Like
                       </a>
-                      <a href="#" class="text-blue-500 hover:underline ml-4">
+                      <a className="text-blue-500 hover:underline ml-4">
                         <i class="fas fa-share-alt mr-1"></i>
                         Share
                       </a>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <Link
                           to="/sales"
                           className="text-white hover:text-yellow-300"
                         >
-                          <a href="#" class="text-blue-500 hover:underline">
-                            Read more <i class="fas fa-arrow-right ml-1"></i>
+                          <a className="text-blue-500 hover:underline">
+                            Read more{" "}
+                            <i className="fas fa-arrow-right ml-1"></i>
                           </a>
                         </Link>
                       </div>
@@ -84,31 +84,31 @@ function Projects() {
                   </div>
                 </div>
 
-                <div class="col-md-6 item">
-                  <div class="item-in text-gray-500">
+                <div className="col-md-6 item">
+                  <div className="item-in text-gray-500">
                     <div className="row">
-                      <div className="col-md-12">
+                      <div className="col-md-12 -mt-2">
                         <img
                           className="rounded rounded-md"
                           src="../projects/dataset-cover.jpg"
-                          alt="image"
+                          alt=""
                         />
                       </div>
                     </div>
-                    <div class="flex items-center gap-x-4 text-xs">
-                      <time datetime="2020-03-16" class="text-gray-500 mt-2">
+                    <div className="flex items-center gap-x-4 text-xs">
+                      <time
+                        datetime="2020-03-16"
+                        className="text-gray-500 mt-2"
+                      >
                         27 February 2024
                       </time>
-                      <a
-                        href="#"
-                        class="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100"
-                      >
+                      <a className="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100">
                         Python
                       </a>
                     </div>
 
                     <h4>Titanic survival analysis</h4>
-                    <div class="seperator"></div>
+                    <div className="seperator"></div>
                     <p>
                       The project aims to analyze Titanic data to understand
                       survival factors: passenger class impact, gender
@@ -116,71 +116,23 @@ function Projects() {
                       with relatives, and survival rates across age groups.
                     </p>
 
-                    <div class="flex items-center mt-4">
-                      <a href="#" class="text-blue-500 hover:underline">
-                        <i class="fas fa-heart mr-1"></i>
+                    <div className="flex items-center mt-4">
+                      <a className="text-blue-500 hover:underline">
+                        <i className="fas fa-heart mr-1"></i>
                         Like
                       </a>
-                      <a href="#" class="text-blue-500 hover:underline ml-4">
+                      <a className="text-blue-500 hover:underline ml-4">
                         <i class="fas fa-share-alt mr-1"></i>
                         Share
                       </a>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <Link
                           to="/titanic"
                           className="text-white hover:text-yellow-300"
                         >
-                          <a href="#" class="text-blue-500 hover:underline">
+                          <a className="text-blue-500 hover:underline">
                             Read more
-                            <i class="fas fa-arrow-right ml-1"></i>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className="row mb-4">
-                <div class="col-md-6 item">
-                  <div class="item-in text-gray-500">
-                    <div class="flex items-center gap-x-4 text-xs">
-                      <img src="../../../public/projects/dataset-cover.jpg" />
-                      <time datetime="2020-03-16" class="text-gray-500 mt-2">
-                        27 February 2024
-                      </time>
-                      <a
-                        href="#"
-                        class="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100"
-                      >
-                        Pytho
-                      </a>
-                    </div>
-                    <h4>Titnic survival analysis</h4>
-                    <div class="seperator"></div>
-                    <p>
-                      This project aimed to extract a Kaggle dataset, import it
-                      into SQL Workbench, connect to Power BI, and execute
-                      diverse queries and power queries for transformation,
-                      loading, and visualization.
-                    </p>
-                    <div class="flex items-center mt-4">
-                      <a href="#" class="text-blue-500 hover:underline">
-                        <i class="fas fa-heart mr-1"></i>
-                        Like
-                      </a>
-                      <a href="#" class="text-blue-500 hover:underline ml-4">
-                        <i class="fas fa-share-alt mr-1"></i>
-                        Share
-                      </a>
-                      <div class="ml-auto">
-                        <Link
-                          to="/sales"
-                          className="text-white hover:text-yellow-300"
-                        >
-                          <a href="#" class="text-blue-500 hover:underline">
-                            Read more <i class="fas fa-arrow-right ml-1"></i>
+                            <i className="fas fa-arrow-right ml-1"></i>
                           </a>
                         </Link>
                       </div>
@@ -190,12 +142,6 @@ function Projects() {
               </div>
             </Carousel.Item>
           </Carousel>
-        </div>
-        <div className="row">
-          <div class="flex justify-between m">
-            <h4 class="mr-auto"> Other projects</h4>
-          </div>
-          <hr className="text-gray-300"></hr>
         </div>
       </div>
     </div>

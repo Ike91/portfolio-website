@@ -1,14 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { MdLocationOn, MdEmail } from "react-icons/md";
 
 function Contact() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 

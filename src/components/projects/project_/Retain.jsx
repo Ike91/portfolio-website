@@ -43,6 +43,7 @@ export default function TitanicSurvivalAnalysis() {
             <a
               href="https://www.kaggle.com/datasets/shubhamgupta012/titanic-dataset"
               target="_blank"
+              rel="noreferrer"
             >
               Read more about the dataset{" "}
               <i className="fas fa-arrow-right ml-1"></i>
@@ -428,14 +429,14 @@ plt.show()
                 <img
                   className="border p-2"
                   src="../projects/Titanic/output 1.png"
-                  alt="image"
+                  alt=""
                 />
               </div>
               <div className="col-md-6">
                 <img
                   className="border p-2 "
                   src="../projects/Titanic/output.png"
-                  alt="image"
+                  alt=""
                 />
               </div>
             </div>
@@ -536,14 +537,14 @@ plt.show()
                   <img
                     className="border p-2 "
                     src="../projects/Titanic/output 2.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
                 <div className="col-md-6">
                   <img
                     className="border p-2"
                     src="../projects/Titanic/output 3.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
               </div>
@@ -627,14 +628,14 @@ plt.show()
                   <img
                     className="border border p-2"
                     src="../projects/Titanic/output 6.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
                 <div className="col-md-6">
                   <img
                     className="border p-2 "
                     src="../projects/Titanic/output 7.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
               </div>
@@ -718,14 +719,14 @@ plt.show()
                   <img
                     className="border border p-2"
                     src="../projects/Titanic/output 4.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
                 <div className="col-md-6">
                   <img
                     className="border p-2 "
                     src="../projects/Titanic/output 5.png"
-                    alt="image"
+                    alt=""
                   />
                 </div>
               </div>

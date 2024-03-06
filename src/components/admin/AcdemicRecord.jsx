@@ -1,6 +1,4 @@
 import React from "react";
-import { useAuth } from "../../contexts/AuthContext";
-import { ToastContainer, toast } from "react-toastify";
 
 export default function AcdemicRecord() {
   function getTodaysDate() {

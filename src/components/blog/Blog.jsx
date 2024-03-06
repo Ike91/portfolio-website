@@ -7,30 +7,6 @@ export default function Blog() {
   const [currentProject, setCurrentProject] = useState(null);
   const { getProjectById } = useAuth();
 
-  // Function to format the date as "Month Year" string
-  const formatMonthYear = (date) => {
-    if (!date) return "";
-
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const monthIndex = date.getMonth();
-    const year = date.getFullYear();
-
-    return `${monthNames[monthIndex]} ${year}`;
-  };
-
   useEffect(() => {
     async function fetchProject() {
       try {
@@ -41,7 +17,7 @@ export default function Blog() {
       }
     }
     fetchProject();
-  }, [projectId]);
+  });
 
   return (
     <div className="p-4 sm:ml-64 sm:mr-35">
