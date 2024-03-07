@@ -2,7 +2,7 @@ import React from "react";
 
 function Education() {
   return (
-    <div className="container">
+    <div className="">
       <div className=" p-4 sm:ml-64 sm:mr-40 item-in">
         <ol class="relative border-s border-gray-700 ">
           <li class="mb-10 ms-4 ">
