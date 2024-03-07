@@ -332,8 +332,7 @@ Education
 @media (max-width: 768px) {
   ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 20px;
   }
 }
 
