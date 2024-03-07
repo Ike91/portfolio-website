@@ -11,7 +11,7 @@ export default function Sales() {
   };
 
   return (
-    <div className="p-4 sm:ml-64 sm:mr-35">
+    <div className="p-1 sm:ml-64 sm:mr-35">
       <div className="container sales">
         <div class="flex items-center gap-x-4 text-xs mb-2">
           <time datetime="2020-03-16" class="text-gray-500 mt-2">
