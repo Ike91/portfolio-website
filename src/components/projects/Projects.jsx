@@ -12,7 +12,7 @@ function Projects() {
 
   return (
     <div className="project p-3 sm:ml-64 sm:mr-35">
-      <div className="projects admin">
+      <div className="projects admin container">
         <div class="row ">
           <div class="flex justify-between ">
             <h4 class="mr-auto"> Data analysis projects</h4>
