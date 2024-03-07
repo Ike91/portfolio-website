@@ -2,8 +2,8 @@ import React from "react";
 
 function Education() {
   return (
-    <div className=" p-4 sm:ml-64 sm:h-screen sm:mr-35 item-in">
-      <div className="container">
+    <div className="container">
+      <div className=" p-4 sm:ml-64 sm:mr-40 item-in">
         <ol class="relative border-s border-gray-700 ">
           <li class="mb-10 ms-4 ">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
