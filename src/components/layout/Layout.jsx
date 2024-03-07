@@ -6,7 +6,7 @@ function Layout() {
   return (
     <div className="bg-[#22212b]">
       <LeftSideBar />
-      <main className="pt-5">
+      <main className="pt-5 bg-[#22212b]">
         <Outlet />
       </main>
       <RightSideBar />
