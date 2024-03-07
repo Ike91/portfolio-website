@@ -422,14 +422,14 @@ plt.show()
             <div className="row">
               <div className="col-md-6 mt-2">
                 <img
-                  className="border p-2"
+                  className="border p-2 w-full"
                   src="../projects/Titanic/output 1.png"
                   alt=""
                 />
               </div>
               <div className="col-md-6 mt-2">
                 <img
-                  className="border p-2 "
+                  className="border p-2 w-full"
                   src="../projects/Titanic/output.png"
                   alt=""
                 />
