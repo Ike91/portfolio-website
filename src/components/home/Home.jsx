@@ -7,13 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { VscRequestChanges } from "react-icons/vsc";
-
+import resume from "../../documents/Isaac.pdf";
 function Home() {
   const [text, setText] = useState("");
   const { fetchDocuments } = useAuth();
   const [activeTab] = useState("");
   const [setDocument] = useState([]);
-  const [fileUrl] = useState("");
+
   const fullText = "ISAAC MHLANGA";
 
   const full =
@@ -58,7 +58,7 @@ function Home() {
 
   //download resume
   const handleDownload = () => {
-    window.open(fileUrl, "_blank");
+    window.open(resume, "_blank");
   };
 
   //form handle
