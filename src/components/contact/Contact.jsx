@@ -32,7 +32,7 @@ function Contact() {
   };
 
   return (
-    <div className="p-2 sm:ml-64 sm:h-screen sm:mr-35 h-screen">
+    <div className="p-3 sm:ml-64 sm:mr-40">
       <div class="container admin">
         <div className="row mb-5">
           <div className="col-md-4 my-2">

@@ -5,10 +5,10 @@ import { BsTelephoneFill } from "react-icons/bs";
 
 function WorkExperience() {
   return (
-    <div className="p-4 sm:ml-64 sm:h-screen sm:mr-35 h-screen">
+    <div className="p-3 sm:ml-64 sm:mr-40">
       <div className="container">
         <ol class="relative border-s border-gray-700 ">
-          <li class="mb-10 ms-4">
+          <li class="mb-10">
             <div class="absolute w-3 h-3 bg-gray-200   rounded-full mt-1.5 -start-1.5 border-1 border-yellow-400 "></div>
             <time class="mb-1 text-sm font-normal leading-none text-gray-400 ">
               Mar 16 2023 - Nov 30 2023
