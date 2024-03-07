@@ -5,7 +5,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 
 function WorkExperience() {
   return (
-    <div className=" p-4 sm:ml-64 sm:mr-40">
+    <div className=" p-4 sm:ml-64 sm:h-screen sm:mr-35">
       <div className="container">
         <ol class="relative border-s border-gray-700 ">
           <li class="mb-10 ms-4">

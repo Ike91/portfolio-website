@@ -11,7 +11,7 @@ function Projects() {
   };
 
   return (
-    <div className="project p-3 sm:ml-64 sm:mr-35">
+    <div className="project p-3 sm:ml-64 sm:h-screen sm:mr-35">
       <div className="projects admin container">
         <div class="row ">
           <div class="flex justify-between ">
