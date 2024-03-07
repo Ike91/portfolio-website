@@ -11,7 +11,7 @@ function Projects() {
   };
 
   return (
-    <div className="project p-4 sm:ml-64 sm:mr-35">
+    <div className="project p-2 sm:ml-64 sm:mr-35">
       <div className="projects admin">
         <div class="row ">
           <div class="flex justify-between ">
