@@ -161,7 +161,7 @@ export default function Sales() {
         </p>
 
         <h3 className="text-lg font-semibold ">Suggestions:</h3>
-        <div className="suggestions retail border rounded p-2">
+        <div className="suggestions retail border rounded p-2 mb-5">
           <ul className="list-disc mt-3">
             <li>
               Investigate February's sales decline to identify underlying
