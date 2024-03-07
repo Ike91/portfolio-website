@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Resume from "./Resume";
 import Academic from "./AcdemicRecord";
 
@@ -17,7 +18,7 @@ export default function HomeContent() {
               <h4>Page visits</h4>
             </div>
             <div className="card-body">
-              <h4>120</h4>
+              <h4>0</h4>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function AddProject() {
     <div className="admin addproject">
       <ToastContainer />
       <h4 className="text-sm text-yellow-300 mb-4 text-bold">Add project</h4>
-      <form className="card p-2" onSubmit={handleSubmit}>
+      <form className="p-2" onSubmit={handleSubmit}>
         <div class="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label

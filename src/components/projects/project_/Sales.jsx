@@ -13,11 +13,6 @@ export default function Sales() {
   return (
     <div className="p-4 sm:ml-64 sm:mr-35">
       <div className="container sales">
-        <div className="heading mb-3">
-          <h3 className="text-lg font-semibold underline">
-            Supermarket sales analysis
-          </h3>
-        </div>
         <div class="flex items-center gap-x-4 text-xs mb-2">
           <time datetime="2020-03-16" class="text-gray-500 mt-2">
             27 February 2024
@@ -26,8 +21,11 @@ export default function Sales() {
             href="#"
             class="relative z-10 rounded-full px-2 py-1 font-medium text-yellow-400 hover:bg-gray-100"
           >
-            # SQL + PowerBi
+            SQL + PowerBi
           </a>
+        </div>
+        <div className="heading mb-3">
+          <h3 className="text-xl font-semibold ">Supermarket sales analysis</h3>
         </div>
         <div class="flex items-center gap-4 mt-2">
           <img
@@ -41,7 +39,7 @@ export default function Sales() {
           </div>
         </div>
         <hr className="text-gray-300"></hr>
-        <h3 className="text-lg font-semibold underline">About Dataset</h3>
+        <h3 className="text-lg font-semibold mt-5">About Dataset</h3>
         <p className="mb-5">
           The growth of supermarkets in most populated cities are increasing and
           market competitions are also high. The dataset is one of the
@@ -57,17 +55,17 @@ export default function Sales() {
           </a>
         </p>
 
-        <h3 className="text-lg font-semibold underline">Project Objective:</h3>
-        <div className="objective card p-3 mb-5">
+        <h3 className="text-lg font-semibold ">Project Objective:</h3>
+        <div className="objective retail border rounded p-3 mb-5">
           <p className="mt-2">
-            # The objective of this project was to extract a dataset from
-            Kaggle, import it into SQL Workbench, establish a connection to
-            Power BI, and then conduct various queries and power queries for
+            The objective of this project was to extract a dataset from Kaggle,
+            import it into SQL Workbench, establish a connection to Power BI,
+            and then conduct various queries and power queries for
             transfomations, load and do some visualisation.
           </p>
         </div>
 
-        <h3 className="text-lg font-semibold underline">Introduction</h3>
+        <h3 className="text-lg font-semibold ">Introduction</h3>
 
         <p className="mb-5">
           This report analyzes the sales data of a supermarket company recorded
@@ -79,7 +77,7 @@ export default function Sales() {
           competitiveness in a dynamic market landscape.
         </p>
 
-        <h3 className="text-lg font-semibold underline">Analysis Results</h3>
+        <h3 className="text-lg font-semibold">Analysis Results</h3>
 
         <div className="mt-4">
           <iframe
@@ -114,9 +112,7 @@ export default function Sales() {
           </div>
         </div>
 
-        <h3 className="text-lg font-semibold underline">
-          Overall Sales Performance
-        </h3>
+        <h3 className="text-lg font-semibold ">Overall Sales Performance</h3>
 
         <p className="mb-5">
           Branch C contributed the highest revenue, followed by Branch A and
@@ -126,9 +122,7 @@ export default function Sales() {
           February.
         </p>
 
-        <h3 className="text-lg font-semibold underline">
-          Product Category Analysis
-        </h3>
+        <h3 className="text-lg font-semibold ">Product Category Analysis</h3>
 
         <p className="mb-5">
           'Food and beverages' in branch C emerged as the top-performing
@@ -136,9 +130,7 @@ export default function Sales() {
           travel' in branch B.
         </p>
 
-        <h3 className="text-lg font-semibold underline">
-          Customer Demographics
-        </h3>
+        <h3 className="text-lg font-semibold ">Customer Demographics</h3>
 
         <p className="mb-5">
           The majority of customers were 'Members' shoppers, accounting for
@@ -148,14 +140,14 @@ export default function Sales() {
           customers.
         </p>
 
-        <h3 className="text-lg font-semibold underline">Purchase Patterns</h3>
+        <h3 className="text-lg font-semibold ">Purchase Patterns</h3>
 
         <p className="mb-5">
           The busiest shopping hours were between 1 PM to 5 PM, reflecting
           customer preferences for after-work shopping.
         </p>
 
-        <h3 className="text-lg font-semibold underline">Conclusion</h3>
+        <h3 className="text-lg font-semibold ">Conclusion</h3>
         <p className="mb-5">
           Branch C led in revenue, trailed by Branch A and Branch B. Despite a
           February sales decline across all branches, March saw a recovery.
@@ -168,8 +160,8 @@ export default function Sales() {
           preferences.
         </p>
 
-        <h3 className="text-lg font-semibold underline">Suggestions:</h3>
-        <div className="suggestions card p-2">
+        <h3 className="text-lg font-semibold ">Suggestions:</h3>
+        <div className="suggestions retail border rounded p-2">
           <ul className="list-disc mt-3">
             <li>
               Investigate February's sales decline to identify underlying

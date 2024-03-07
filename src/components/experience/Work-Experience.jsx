@@ -10,10 +10,10 @@ function WorkExperience() {
         <ol class="relative border-s border-gray-700 ">
           <li class="mb-10 ms-4">
             <div class="absolute w-3 h-3 bg-gray-200   rounded-full mt-1.5 -start-1.5 border-1 border-yellow-400 "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
               Mar 16 2023 - Nov 30 2023
             </time>
-            <h3 class="text-lg font-semibold underline">
+            <h3 class="text-lg font-semibold">
               IT Technical Support (ICS) | University of Johannesburg
             </h3>
             <p className="mb-4">
@@ -22,7 +22,7 @@ function WorkExperience() {
               laboratory service at UJ.
             </p>
 
-            <h3 className="text-lg font-semibold underline mb-4">
+            <h3 className="text-lg font-semibold  mb-4">
               Key Performance Areas:
             </h3>
             <ul className="list-disc">
@@ -77,13 +77,13 @@ function WorkExperience() {
           <hr className="text-gray-400"></hr>
           <div className="list-disc text-base mt-3 font-normal  text-gray-400 ">
             <div className="flex items-center mb-2">
-              <span className="">
+              <span>
                 <CgProfile className="mr-2" />
               </span>
               Mr. Rest Mabunda | Team Leader
             </div>
             <div className="flex items-center mb-2">
-              <span className="">
+              <span>
                 <BsTelephoneFill className="mr-2" />
               </span>
               <span>0836226556 | 0115593472</span>

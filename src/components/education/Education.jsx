@@ -8,13 +8,14 @@ function Education() {
           <li class="mb-10 ms-4 ">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
             <div class="flex items-center gap-x-4 mb-2 text-xs">
-              <time datetime="2020-03-16" class="text-gray-500 mt-2">
+              <time
+                datetime="2020-03-16"
+                className="text-sm font-normal leading-none text-yellow-400 mt-2"
+              >
                 Feb, 2019 - Nov 16, 2023
               </time>
             </div>
-            <h3 class="text-font-semibold underline">
-              University of Johannesburg
-            </h3>
+            <h3 class="text-font-semibold">University of Johannesburg</h3>
             <p class="mb-4">
               As a third-year student in Mathematics and Computer Sciences at
               the University of Johannesburg, I'm skilled in programming and
@@ -26,10 +27,10 @@ function Education() {
           </li>
           <li class="mb-10 ms-4 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
+            <time class="mb-1 text-sm font-normal leading-none text-yellow-400">
               March 2022
             </time>
-            <h3 class="text-lg font-semibold underline">
+            <h3 class="text-lg font-semibold ">
               An introduction to artificial intelligence (AI)
             </h3>
             <p>
@@ -43,10 +44,10 @@ function Education() {
           </li>
           <li class="ms-4 mb-10 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-400 ">
+            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
               April 2022
             </time>
-            <h3 class="text-lg font-semibold underline">African Insights</h3>
+            <h3 class="text-lg font-semibold ">African Insights</h3>
             <p class="">
               In "African Insights 2023", I deepened my understanding of
               Africa's heritage and contemporary significance. Engaging with
@@ -59,20 +60,18 @@ function Education() {
 
           <li class="ms-4 mb-10 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-400 ">
+            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
               Feb 2015 - Dec 2017
             </time>
-            <h3 class="text-lg font-semibold underline">
-              Matseliso Secondary School
-            </h3>
+            <h3 class="text-lg font-semibold">Matseliso Secondary School</h3>
           </li>
 
           <li class="mb-10 ms-4 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
+            <time class="mb-1 text-sm font-normal leading-none text-yellow-400">
               March 2015 - Dec 2017
             </time>
-            <h3 class="text-lg font-semibold underline">
+            <h3 class="text-lg font-semibold ">
               Kutlwanong | Centre for Maths, Science and Technology
             </h3>
             <ul class="list-disc mt-2 leading-8">

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
@@ -16,7 +16,7 @@ import {
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { auth } from "../config/firebase";
 
-const AuthContext = React.createContext();
+const AuthContext = createContext();
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -25,14 +25,15 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
+  const [uniqueVisitorsCount, setUniqueVisitorsCount] = useState(0);
 
-  //refernce to the storage
+  // Reference to the storage
   const storage = getStorage();
 
-  //database
+  // Database
   const db = getFirestore();
 
-  //Login a user
+  // Login a user
   async function login(email, password) {
     try {
       const loggedInUser = await signInWithEmailAndPassword(
@@ -47,7 +48,7 @@ export function AuthProvider({ children }) {
     }
   }
 
-  // save posts
+  // Save posts
   async function saveProject(projectData) {
     try {
       const { title, language, summary, editorContent } = projectData;
@@ -59,14 +60,16 @@ export function AuthProvider({ children }) {
         summary,
         editorContent,
         timestamp: new Date(),
+        likesCount: 0,
+        viewsCount: 0,
       });
-      console.log("project uploaded successfully with ID:", projectDocRef.id);
+      console.log("Project uploaded successfully with ID:", projectDocRef.id);
     } catch (error) {
       console.log(error);
     }
   }
 
-  // get project
+  // Get projects
   async function getProjects() {
     const projectsCollectionRef = collection(db, "projects");
     const querySnapshot = await getDocs(projectsCollectionRef);
@@ -77,7 +80,7 @@ export function AuthProvider({ children }) {
     return projects;
   }
 
-  //get project by id
+  // Get project by ID
   async function getProjectById(projectId) {
     const projectsCollectionRef = collection(db, "projects");
     const projectDocRef = doc(projectsCollectionRef, projectId);
@@ -89,15 +92,15 @@ export function AuthProvider({ children }) {
     }
   }
 
-  //upload files
-  async function uploaddocument(file) {
+  // Upload files
+  async function uploadDocument(file) {
     const fileName = `${file.name}`;
     try {
       const userStorageRef = ref(storage, "documents");
-      const FileRef = ref(userStorageRef, fileName);
+      const fileRef = ref(userStorageRef, fileName);
       // Upload file to storage
-      await uploadBytes(FileRef, file);
-      const fileUrl = await getDownloadURL(FileRef);
+      await uploadBytes(fileRef, file);
+      const fileUrl = await getDownloadURL(fileRef);
       // Add a new document with a unique ID
       const documentsCollectionRef = collection(db, "documents");
       await addDoc(documentsCollectionRef, {
@@ -110,12 +113,13 @@ export function AuthProvider({ children }) {
     }
   }
 
-  //get the cv
-  const fetchDocuments = async () => {
+  // Get the CV
+  async function fetchDocuments() {
     try {
       const q = query(collection(db, "documents"));
       const documentsCollection = await getDocs(q);
       const documents = documentsCollection.docs.map((doc) => ({
+        id: doc.id,
         ...doc.data(),
       }));
       console.log(documents);
@@ -123,14 +127,14 @@ export function AuthProvider({ children }) {
     } catch (error) {
       throw error;
     }
-  };
+  }
 
-  //Logout a user
+  // Logout a user
   function logout() {
     return auth.signOut();
   }
 
-  //Reset password
+  // Reset password
   async function resetPassword(email) {
     try {
       await sendPasswordResetEmail(auth, email);
@@ -139,7 +143,7 @@ export function AuthProvider({ children }) {
     }
   }
 
-  //Update email
+  // Update email
   async function updateEmail(email) {
     try {
       await currentUser.updateEmail(email);
@@ -148,7 +152,7 @@ export function AuthProvider({ children }) {
     }
   }
 
-  //Update password
+  // Update password
   async function updatePassword(password) {
     try {
       await currentUser.updatePassword(password);
@@ -156,6 +160,33 @@ export function AuthProvider({ children }) {
       throw error;
     }
   }
+
+  useEffect(() => {
+    // Firebase database reference for counting unique visitors
+    const visitorsCountRef = doc(db, "statistics", "uniqueVisitors");
+
+    // Increment visitor count when a new visit is detected
+    const incrementVisitorCount = async () => {
+      try {
+        await db.runTransaction(async (transaction) => {
+          const docSnapshot = await transaction.get(visitorsCountRef);
+          const currentCount = docSnapshot.data().count || 0;
+          transaction.update(visitorsCountRef, { count: currentCount + 1 });
+          setUniqueVisitorsCount(currentCount + 1);
+        });
+      } catch (error) {
+        console.log("Error incrementing visitor count:", error);
+      }
+    };
+
+    // Call incrementVisitorCount on initial load
+    incrementVisitorCount();
+
+    // Cleanup function
+    return () => {
+      // No need to clean up anything in this case
+    };
+  });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -166,6 +197,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const value = {
+    currentUser,
     login,
     logout,
     saveProject,
@@ -173,9 +205,10 @@ export function AuthProvider({ children }) {
     getProjectById,
     resetPassword,
     fetchDocuments,
-    uploaddocument,
+    uploadDocument,
     updateEmail,
     updatePassword,
+    uniqueVisitorsCount,
   };
 
   return (

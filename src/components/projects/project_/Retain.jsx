@@ -4,13 +4,8 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function TitanicSurvivalAnalysis() {
   return (
-    <div className="p-4 sm:ml-64 sm:mr-35">
+    <div className="p-1 sm:ml-64 sm:mr-35">
       <div className="container sales">
-        <div className="heading mb-3">
-          <h3 className="text-lg font-semibold underline">
-            Titanic Survival Analysis
-          </h3>
-        </div>
         <div className="meta-info flex items-center gap-x-4 text-xs mb-2">
           <time dateTime="2020-03-16" className="text-gray-500 mt-2">
             27 February 2024
@@ -22,7 +17,12 @@ export default function TitanicSurvivalAnalysis() {
             Python
           </a>
         </div>
-        <div className="author-info flex items-center gap-4 mt-2">
+        <div className="heading mb-3">
+          <h3 className="text-lg font-semibold text-xl">
+            Titanic Survival Analysis
+          </h3>
+        </div>
+        <div className="author-info flex items-center gap-4 -mt-1">
           <img
             className="w-10 h-10 rounded-full"
             src="../images/unnamed.png"
@@ -33,9 +33,10 @@ export default function TitanicSurvivalAnalysis() {
             <div className="text-sm text-gray-500">i.mhlanga@icloud.com</div>
           </div>
         </div>
-        <hr className="text-gray-300" />
-        <section>
-          <h3 className="text-lg font-semibold underline">About Dataset</h3>
+        <hr className="text-gray-100" />
+
+        <section className="mt-5">
+          <h3 className="text-lg font-semibold">About Dataset</h3>
           <p className="mb-5">
             The Titanic Passenger dataset provides information about passengers
             who were aboard the RMS Titanic during its ill-fated maiden voyage.
@@ -45,41 +46,36 @@ export default function TitanicSurvivalAnalysis() {
               target="_blank"
               rel="noreferrer"
             >
-              Read more about the dataset{" "}
+              Read more about the dataset
               <i className="fas fa-arrow-right ml-1"></i>
             </a>
           </p>
         </section>
-        <section>
-          <h3 className="text-lg font-semibold underline">
-            Project Objective:
-          </h3>
-          <div className="objective card p-3 mb-5">
-            <p className="mt-2">
-              The objective of this project is to analyze the Titanic passenger
-              dataset to investigate the factors influencing survival rates
-              among passengers.
-            </p>
-            <ul className="list-disc mt-2">
-              <li>
-                Which passenger class has the maximum number of survivors?
-              </li>
-              <li>
-                What is the distribution, based on gender, of the survivors
-                among the different classes?
-              </li>
-              <li>
-                What is the distribution of the nonsurvivors among classes that
-                have relatives aboard the ship?
-              </li>
-              <li>
-                What is the survival percentage among different age groups?
-              </li>
-            </ul>
-          </div>
+        <section className="retain p-3 rounded-md border border-gray-700">
+          <h3 className="text-lg font-semibold mb-3">Project Objective:</h3>
+          <p className="mt-2">
+            The objective of this project is to analyze the Titanic passenger
+            dataset to investigate the factors influencing survival rates among
+            passengers.
+          </p>
+          <ul className="list-disc mt-2">
+            <li>Which passenger class has the maximum number of survivors?</li>
+            <li>
+              What is the distribution, based on gender, of the survivors among
+              the different classes?
+            </li>
+            <li>
+              What is the distribution of the nonsurvivors among classes that
+              have relatives aboard the ship?
+            </li>
+            <li>What is the survival percentage among different age groups?</li>
+          </ul>
         </section>
-        <section className="analysis">
-          <h3 className="text-lg font-semibold underline">Dtat exploration</h3>
+        <section className="analysis mt-5">
+          <h3 className="text-lg font-semibold mb-2">Data exploration</h3>
+          <p className="mt-3">
+            I display the first few rows of the DataFrame using the
+          </p>
           <SyntaxHighlighter
             className="mt-4"
             language="python"
@@ -93,7 +89,7 @@ import numpy as np
 df = pd.read_csv('C:/Users/Ike/Documents/Academics/Learning/Data analysis/Projects/New folder/SVMtrain.csv')
             `}
           </SyntaxHighlighter>
-          <p className="mt-5">
+          <p className="mt-3">
             I display the first few rows of the DataFrame using the
             <code> head()</code> method to get a sense of the data.
           </p>
@@ -177,7 +173,7 @@ df = pd.read_csv('C:/Users/Ike/Documents/Academics/Learning/Data analysis/Projec
             </tbody>
           </table>
 
-          <p className="mt-5">
+          <p className="mt-4">
             Here I notice that the gender column has inconsistent capitalization
             for male and female values, which is not consistent. As a result, I
             have to capitalize the first letter of female.
@@ -191,7 +187,7 @@ df = pd.read_csv('C:/Users/Ike/Documents/Academics/Learning/Data analysis/Projec
             {`df['Sex'] = df['Sex'].str.capitalize() `}
           </SyntaxHighlighter>
 
-          <p className="mt-5">
+          <p className="mt-4">
             Here, I use <code>df.describe()</code> to describe the numerical
             characteristics of my DataFrame.
           </p>
@@ -307,7 +303,7 @@ df = pd.read_csv('C:/Users/Ike/Documents/Academics/Learning/Data analysis/Projec
               </tr>
             </tbody>
           </table>
-          <p className="mt-5">
+          <p className="mt-4">
             Upon further exploration of my dataset, I confirmed that there are
             no missing values present.
           </p>
@@ -374,21 +370,21 @@ df = pd.read_csv('C:/Users/Ike/Documents/Academics/Learning/Data analysis/Projec
               </tr>
             </tbody>
           </table>
-          <p className="mt-5">
+        </section>
+        <section className="analysis mt-5">
+          <p className="mt-4 mb-5">
             Now that I am familiar with my data and it's ready for analysis, I
             can go ahead and answer the questions I intend to address.
           </p>
-        </section>
-        <section className="analysis mt-5">
-          <h3 className="text-lg font-semibold underline">
-            Which passenger class has the maximum number of survivors
+
+          <h3 className="text-lg font-semibold mt-4 mb-2">
+            1. Which passenger class has the maximum number of survivors
           </h3>
           <p>
             To answer this question, I will construct a simple bar plot of the
             number of survivors and the percentage of survivors in each class,
             respectively.
           </p>
-
           <SyntaxHighlighter
             className="mt-4"
             language="python"
@@ -422,17 +418,16 @@ xtickNames = ax.set_xticklabels(xTickMarks)
 plt.show()
             `}
           </SyntaxHighlighter>
-
           <div className="visualization">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 mt-2">
                 <img
                   className="border p-2"
                   src="../projects/Titanic/output 1.png"
                   alt=""
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 mt-2">
                 <img
                   className="border p-2 "
                   src="../projects/Titanic/output.png"
@@ -441,9 +436,9 @@ plt.show()
               </div>
             </div>
           </div>
-          <div className="observations">
-            <h3 className="mt-5">These are our observations:</h3>
-            <div className="card p-2">
+          <div className=" observations ">
+            <h3 className="mt-5">Observations</h3>
+            <div className="retain p-2 border rounded-md">
               <ul className="list-disc mt-3">
                 <li>
                   The maximum number of survivors are in the first and third
@@ -459,8 +454,9 @@ plt.show()
                 </li>
               </ul>
             </div>
-            <h3 className="mt-5">This is our key takeaway:</h3>
-            <div className="card p-3">
+
+            <h3 className="mb-2 mt-5">Key takeaway</h3>
+            <div className="retain pl-3 pt-3 rounded-md border">
               <p>
                 There was clearly a preference toward saving those from the
                 first class as the ship was drowning. It also had the maximum
@@ -468,22 +464,23 @@ plt.show()
               </p>
             </div>
           </div>
-          <section>
-            <h3 className="text-lg font-semibold underline mt-5">
-              What is the distribution of survivors based on gender among the
-              various classes?
-            </h3>
-            <p>
-              To answer this question, I will use the following code to plot a
-              side-by-side bar chart to compare the survival rate and percentage
-              among men and women with respect to the class they were in.
-            </p>
-            <SyntaxHighlighter
-              className="mt-4"
-              language="python"
-              style={vscDarkPlus}
-            >
-              {`
+        </section>
+        <section className="mt-5">
+          <h3 className="text-lg font-semibold mt-5 mb-2">
+            2. What is the distribution of survivors based on gender among
+            various classes?
+          </h3>
+          <p>
+            To answer this question, I will use the following code to plot a
+            side-by-side bar chart to compare the survival rate and percentage
+            among men and women with respect to the class they were in.
+          </p>
+          <SyntaxHighlighter
+            className="mt-4"
+            language="python"
+            style={vscDarkPlus}
+          >
+            {`
 # Capitalize the 'Sex' column values
 male_survivors = df[df['Sex'] == 'Male'].groupby('Pclass')['Survived'].agg(sum)
 
@@ -530,68 +527,68 @@ plt.legend()
 plt.tight_layout()
 plt.show()
               `}
-            </SyntaxHighlighter>
-            <div className="visualization">
-              <div className="row">
-                <div className="col-md-6">
-                  <img
-                    className="border p-2 "
-                    src="../projects/Titanic/output 2.png"
-                    alt=""
-                  />
-                </div>
-                <div className="col-md-6">
-                  <img
-                    className="border p-2"
-                    src="../projects/Titanic/output 3.png"
-                    alt=""
-                  />
-                </div>
+          </SyntaxHighlighter>
+          <div className="visualization">
+            <div className="row">
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border p-2 "
+                  src="../projects/Titanic/output 2.png"
+                  alt=""
+                />
+              </div>
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border p-2"
+                  src="../projects/Titanic/output 3.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div className="observations">
-              <h3 className="mt-5">These are our observations:</h3>
-              <div className="card p-2">
-                <ul className="list-disc mt-3">
-                  <li>
-                    The majority of survivors are females in all the classes.
-                  </li>
-                  <li>
-                    More than 90% of female passengers in first and second class
-                    survived.
-                  </li>
-                  <li>
-                    The percentage of male passengers who survived in first and
-                    third class, respectively, are comparable.
-                  </li>
-                </ul>
-              </div>
-              <h3 className="mt-5">This is our key takeaway:</h3>
-              <div className="card p-3">
-                <p>
-                  Female passengers were given preference for lifeboats and the
-                  majority were saved.
-                </p>
-              </div>
+          </div>
+          <div className="observations">
+            <h3 className="mt-5 mb-2">Observations</h3>
+            <div className="retain p-2 border rounded">
+              <ul className="list-disc mt-3">
+                <li>
+                  The majority of survivors are females in all the classes.
+                </li>
+                <li>
+                  More than 90% of female passengers in first and second class
+                  survived.
+                </li>
+                <li>
+                  The percentage of male passengers who survived in first and
+                  third class, respectively, are comparable.
+                </li>
+              </ul>
             </div>
-          </section>
-          <section>
-            <h3 className="text-lg font-semibold underline mt-5">
-              What is the distribution of nonsurvivors among the various classes
-              who have family aboard the ship?
-            </h3>
-            <p>
-              To answer this question, I will use the following code to plot bar
-              charts again using the total number of nonsurvivors in each class
-              who each had family aboard, and the percentage with respect to the
-              total number of passengers:
-            </p>
-            <SyntaxHighlighter
-              className="mt-4"
-              language="python"
-              style={vscDarkPlus}
-            >
-              {`
+            <h3 className="mt-5 mb-2">Key takeaway</h3>
+            <div className="retain pl-3 pt-2 border rounded">
+              <p>
+                Female passengers were given preference for lifeboats and the
+                majority were saved.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="mt-5">
+          <h3 className="text-lg font-semibold mb-4 mt-5">
+            3. What is the distribution of nonsurvivors among the various
+            classes who have family aboard the ship?
+          </h3>
+          <p>
+            To answer this question, I will use the following code to plot bar
+            charts again using the total number of nonsurvivors in each class
+            who each had family aboard, and the percentage with respect to the
+            total number of passengers:
+          </p>
+          <SyntaxHighlighter
+            className="mt-4"
+            language="python"
+            style={vscDarkPlus}
+          >
+            {`
 #Total number of non-survivors in each class
 non_survivors = df[(df['SibSp'] > 0) | (df['Parch'] > 0) &  (df['Survived'] == 0)].groupby('Pclass')['Survived'].agg('count')
 #Total passengers in each class
@@ -621,69 +618,69 @@ xtickNames = ax.set_xticklabels(xTickMarks)
 plt.show()
 
               `}
-            </SyntaxHighlighter>
-            <div className="visualization">
-              <div className="row">
-                <div className="col-md-6">
-                  <img
-                    className="border border p-2"
-                    src="../projects/Titanic/output 6.png"
-                    alt=""
-                  />
-                </div>
-                <div className="col-md-6">
-                  <img
-                    className="border p-2 "
-                    src="../projects/Titanic/output 7.png"
-                    alt=""
-                  />
-                </div>
+          </SyntaxHighlighter>
+          <div className="visualization">
+            <div className="row">
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border border p-2"
+                  src="../projects/Titanic/output 6.png"
+                  alt=""
+                />
+              </div>
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border p-2 "
+                  src="../projects/Titanic/output 7.png"
+                  alt=""
+                />
               </div>
             </div>
+          </div>
 
-            <div className="observations">
-              <h3 className="mt-5">These are our observations</h3>
-              <div className="card p-2">
-                <ul className="list-disc mt-3">
-                  <li>There are lot of nonsurvivors in the third class</li>
-                  <li>
-                    Second class has the least number of nonsurvivors with
-                    relatives
-                  </li>
-                  <li>
-                    With respect to the total number of passengers, the first
-                    class, who had relatives aboard, has the maximum nonsurvivor
-                    percentage and the third class has the least
-                  </li>
-                </ul>
-              </div>
-              <h3 className="mt-5">This is our key takeaway:</h3>
-              <div className="card p-3">
-                <p>
-                  Even though third class has the highest number of nonsurvivors
-                  with relatives aboard, it primarily had passengers who did not
-                  have relatives on the ship, whereas in first class, most of
-                  the people had relatives aboard the ship
-                </p>
-              </div>
+          <div className="observations">
+            <h3 className="mt-5">Observations</h3>
+            <div className="retain p-2 border rounded">
+              <ul className="list-disc mt-3">
+                <li>There are lot of nonsurvivors in the third class</li>
+                <li>
+                  Second class has the least number of nonsurvivors with
+                  relatives
+                </li>
+                <li>
+                  With respect to the total number of passengers, the first
+                  class, who had relatives aboard, has the maximum nonsurvivor
+                  percentage and the third class has the least
+                </li>
+              </ul>
             </div>
-          </section>
-          <section>
-            <h3 className="text-lg font-semibold underline mt-5">
-              What was the survival percentage among different age groups?
-            </h3>
-            <p>
-              To answer this question, I will use the following code to plot bar
-              charts again using the total number of nonsurvivors in each class
-              who each had family aboard, and the percentage with respect to the
-              total number of passengers:
-            </p>
-            <SyntaxHighlighter
-              className="mt-4"
-              language="python"
-              style={vscDarkPlus}
-            >
-              {`
+            <h3 className="mt-5">Key takeaway</h3>
+            <div className="retain border rounded p-3">
+              <p>
+                Even though third class has the highest number of nonsurvivors
+                with relatives aboard, it primarily had passengers who did not
+                have relatives on the ship, whereas in first class, most of the
+                people had relatives aboard the ship
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="analysis mt-5 mb-5">
+          <h3 className="text-lg font-semibold mt-4">
+            4. What was the survival percentage among different age groups?
+          </h3>
+          <p>
+            To answer this question, I will use the following code to plot bar
+            charts again using the total number of nonsurvivors in each class
+            who each had family aboard, and the percentage with respect to the
+            total number of passengers:
+          </p>
+          <SyntaxHighlighter
+            className="mt-4"
+            language="python"
+            style={vscDarkPlus}
+          >
+            {`
 #Defining the age binning interval
 age_bin = [0, 18, 25, 40, 60, 100]
 
@@ -712,54 +709,53 @@ plt.title('Survivors in different age groups')
 plt.show()
 
               `}
-            </SyntaxHighlighter>
-            <div className="visualization">
-              <div className="row">
-                <div className="col-md-6">
-                  <img
-                    className="border border p-2"
-                    src="../projects/Titanic/output 4.png"
-                    alt=""
-                  />
-                </div>
-                <div className="col-md-6">
-                  <img
-                    className="border p-2 "
-                    src="../projects/Titanic/output 5.png"
-                    alt=""
-                  />
-                </div>
+          </SyntaxHighlighter>
+          <div className="visualization">
+            <div className="row">
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border border p-2"
+                  src="../projects/Titanic/output 4.png"
+                  alt=""
+                />
+              </div>
+              <div className="col-md-6 mt-2">
+                <img
+                  className="border p-2 "
+                  src="../projects/Titanic/output 5.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div className="observations">
-              <h3 className="mt-5">These are our observations</h3>
-              <div className="card p-2">
-                <ul className="list-disc mt-3">
-                  <li>
-                    The 25-40 age group has the maximum number of passengers,
-                    and 0-18 has the second highest number of passengers
-                  </li>
-                  <li>
-                    Among the people who survived, the 18-25 age group has the
-                    second highest number of survivors
-                  </li>
-                  <li>
-                    The 60-100 age group has a lower proportion among the
-                    survivors
-                  </li>
-                </ul>
-              </div>
-              <h3 className="mt-5">This is our key takeaway:</h3>
-              <div className="card p-3">
-                <p>
-                  The 25-40 age group had the maximum number of survivors
-                  compared to any other age group, and people who were old were
-                  either not lucky enough or made way for the younger people to
-                  the lifeboats.
-                </p>
-              </div>
+          </div>
+          <div className="observations">
+            <h3 className="mt-5">Observations</h3>
+            <div className="retain border rounded p-2">
+              <ul className="list-disc mt-3">
+                <li>
+                  The 25 - 40 age group has the maximum number of passengers,
+                  and 0 - 18 has the second highest number of passengers
+                </li>
+                <li>
+                  Among the people who survived, the 18 - 25 age group has the
+                  second highest number of survivors
+                </li>
+                <li>
+                  The 60 - 100 age group has a lower proportion among the
+                  survivors
+                </li>
+              </ul>
             </div>
-          </section>
+            <h3 className="mt-5">Key takeaway</h3>
+            <div className="retain border rounded p-3">
+              <p>
+                The 25 - 40 age group had the maximum number of survivors
+                compared to any other age group, and people who were old were
+                either not lucky enough or made way for the younger people to
+                the lifeboats.
+              </p>
+            </div>
+          </div>
         </section>
       </div>
     </div>

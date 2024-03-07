@@ -44,7 +44,7 @@ p {
 h3 {
   font-size: var(--h3);
   color: var(--emphasis);
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -335,11 +335,6 @@ Education
     /* padding: 0;
     margin: 0; */
   }
-
-  /* li {
-    margin: 0;
-    padding: 0;
-  } */
 }
 
 /******************************************
@@ -545,6 +540,11 @@ Login
 /*****************************************************
 Retail
  *****************************************************/
+
+.retain {
+  background: #24242e !important;
+}
+
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
