@@ -10,7 +10,7 @@ function WorkExperience() {
         <ol class="relative border-s border-gray-700 ">
           <li class="mb-10 ms-4">
             <div class="absolute w-3 h-3 bg-gray-200   rounded-full mt-1.5 -start-1.5 border-1 border-yellow-400 "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400 ">
               Mar 16 2023 - Nov 30 2023
             </time>
             <h3 class="text-lg font-semibold">

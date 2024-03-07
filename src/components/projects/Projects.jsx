@@ -11,7 +11,7 @@ function Projects() {
   };
 
   return (
-    <div className="project p-1 sm:ml-64 sm:mr-35">
+    <div className="project p-3 sm:ml-64 sm:mr-35">
       <div className="projects admin">
         <div class="row ">
           <div class="flex justify-between ">
@@ -56,8 +56,7 @@ function Projects() {
                       This project aimed to meticulously analyze sales data from
                       three branches across highly populated cities, spanning
                       three months, to derive actionable insights. These
-                      insights would enhance business performance and
-                      competitiveness in a dynamic market landscape.
+                      insights would enhance business performance.
                     </p>
 
                     <div class="flex items-center mt-4">

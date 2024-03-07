@@ -10,7 +10,7 @@ function Education() {
             <div class="flex items-center gap-x-4 mb-2 text-xs">
               <time
                 datetime="2020-03-16"
-                className="text-sm font-normal leading-none text-yellow-400 mt-2"
+                className="text-sm font-normal leading-none text-gray-400 mt-2"
               >
                 Feb, 2019 - Nov 16, 2023
               </time>
@@ -27,7 +27,7 @@ function Education() {
           </li>
           <li class="mb-10 ms-4 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-yellow-400">
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
               March 2022
             </time>
             <h3 class="text-lg font-semibold ">
@@ -44,7 +44,7 @@ function Education() {
           </li>
           <li class="ms-4 mb-10 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
               April 2022
             </time>
             <h3 class="text-lg font-semibold ">African Insights</h3>
@@ -60,7 +60,7 @@ function Education() {
 
           <li class="ms-4 mb-10 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-            <time class="mb-1 text-sm font-normal leading-none text-yellow-400 ">
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
               Feb 2015 - Dec 2017
             </time>
             <h3 class="text-lg font-semibold">Matseliso Secondary School</h3>
@@ -68,7 +68,7 @@ function Education() {
 
           <li class="mb-10 ms-4 mt-5">
             <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-yellow-400">
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
               March 2015 - Dec 2017
             </time>
             <h3 class="text-lg font-semibold ">
