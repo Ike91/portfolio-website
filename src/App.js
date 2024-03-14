@@ -8,6 +8,7 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Blog from "./components/blog/Blog.jsx";
 import Sales from "./components/projects/project_/Sales.jsx";
+import Laon from "./components/projects/project_/Laon";
 import Retain from "./components/projects/project_/Retain.jsx";
 import Login from "./components/login/Login.jsx";
 import "prismjs/themes/prism.css";
@@ -49,6 +50,9 @@ function App() {
             </Route>
             <Route path="/titanic" element={<Outlet />}>
               <Route index element={<Retain />} />
+            </Route>
+            <Route path="/loan" element={<Outlet />}>
+              <Route index element={<Laon />} />
             </Route>
             <Route path="/login" element={<Outlet />}>
               <Route index element={<Login />} />

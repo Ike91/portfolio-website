@@ -34,6 +34,123 @@ function Projects() {
                           <img
                             className="rounded rounded-md"
                             h-60
+                            src="../projects/loan.jpeg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-x-4 text-xs">
+                        <time
+                          datetime="2020-03-16"
+                          className="text-gray-500 mt-2"
+                        >
+                          27 February 2024
+                        </time>
+                        <a className="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100">
+                          Python [EDA]
+                        </a>
+                      </div>
+
+                      <h4>Home Loan Approval</h4>
+                      <div className="seperator"></div>
+                      <p>
+                        This project aims to automate loan eligibility process
+                        based on customer details. Given partial dataset,
+                        identify eligible customer segments for targeted loan
+                        amounts to enhance efficiency and precision in loan
+                        approvals.
+                      </p>
+
+                      <div class="flex items-center mt-4">
+                        <a className="text-blue-500 hover:underline">
+                          <i class="fas fa-heart mr-1"></i>
+                          Like
+                        </a>
+                        <a className="text-blue-500 hover:underline ml-4">
+                          <i class="fas fa-share-alt mr-1"></i>
+                          Share
+                        </a>
+                        <div className="ml-auto">
+                          <Link
+                            to="/loan"
+                            className="text-white hover:text-yellow-300"
+                          >
+                            <a className="text-blue-500 hover:underline">
+                              Read more
+                              <i className="fas fa-arrow-right ml-1"></i>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6 item">
+                    <div className="item-in text-gray-500">
+                      <div className="row">
+                        <div className="col-md-12 -mt-2">
+                          <img
+                            className="rounded rounded-md"
+                            src="../projects/dataset-cover.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-x-4 text-xs">
+                        <time
+                          datetime="2020-03-16"
+                          className="text-gray-500 mt-2"
+                        >
+                          27 February 2024
+                        </time>
+                        <a className="relative z-10 rounded-full  px-2 py-1 font-medium text-gray-600 hover:bg-gray-100">
+                          Python
+                        </a>
+                      </div>
+
+                      <h4>Titanic survival analysis</h4>
+                      <div className="seperator"></div>
+                      <p>
+                        The project aims to analyze Titanic data to understand
+                        survival factors: passenger class impact, gender
+                        distribution among survivors, non-survivor distribution
+                        with relatives, and survival rates across age groups.
+                      </p>
+
+                      <div className="flex items-center mt-4">
+                        <a className="text-blue-500 hover:underline">
+                          <i className="fas fa-heart mr-1"></i>
+                          Like
+                        </a>
+                        <a className="text-blue-500 hover:underline ml-4">
+                          <i class="fas fa-share-alt mr-1"></i>
+                          Share
+                        </a>
+                        <div className="ml-auto">
+                          <Link
+                            to="/titanic"
+                            className="text-white hover:text-yellow-300"
+                          >
+                            <a className="text-blue-500 hover:underline">
+                              Read more
+                              <i className="fas fa-arrow-right ml-1"></i>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="row mb-4">
+                  <div className="col-md-6 item">
+                    <div className="item-in text-gray-500">
+                      <div className="row">
+                        <div className="col-md-12">
+                          <img
+                            className="rounded rounded-md"
+                            h-60
                             src="../projects/sales.jpg"
                             alt=""
                           />
